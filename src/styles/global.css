@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'BeautifulPoliceOfficer';
+	src: url('../assets/fonts/BeautifulPoliceOfficer-rvv8x.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'PixelScriptRegular';
+	src: url('../assets/fonts/PixelScriptRegular-0WnDG.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  

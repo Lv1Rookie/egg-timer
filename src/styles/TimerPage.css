@@ -1,0 +1,55 @@
+body {
+	overflow: hidden; /* Prevents scrolling */
+  }
+  
+  .timer {
+	text-align: center;
+	background-color: #E0F7FA;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; /* Aligns content to the top */
+	align-items: center;
+	padding: 20px 10px; /* Adds padding to the top */
+  }
+  
+  #time-remain {
+	font-family: 'BeautifulPoliceOfficer', sans-serif;
+	font-size: clamp(4rem, 7vw, 5rem);
+	color: #008080;
+	text-align: center;
+	max-width: 90vw;
+	margin-top: 30px; /* Adds some space above the time remaining */
+  }
+  
+  #countdown {
+	font-family: 'BeautifulPoliceOfficer', sans-serif;
+	font-size: clamp(5rem, 7vw, 6rem);
+	color: #004D40;
+	margin-top: 10px; /* Adds space above the countdown timer */
+  }
+  
+  .timer-buttons {
+	margin-top: 40px; /* Moves buttons further down */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+  }
+  
+  button {
+	color: #fff;
+	font-family: 'BeautifulPoliceOfficer', sans-serif;
+	padding: 12px 5vw; /* Scales button padding */
+	font-size: clamp(1rem, 4vw, 1.3rem);
+	background-color: #FFD700;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+	background-color: #FFC107;
+  }
+  

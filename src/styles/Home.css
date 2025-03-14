@@ -1,0 +1,38 @@
+body {
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.home {
+  text-align: center;
+  background-color: #FFEBE7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#homepage {
+  font-family: 'PixelScriptRegular', sans-serif !important;
+  font-size: clamp(4rem, 6vw, 5rem); /* Adjusts dynamically */
+  color: #FF69B4;
+  text-align: center;
+  max-width: 90vw;
+}
+
+#start-button {
+  color: #fff;
+  font-family: 'BeautifulPoliceOfficer', sans-serif !important;
+  padding: 10px 5vw; /* Scales button padding */
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  background-color: #FFD1DC;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+  background-color: #FFA7C4;
+}

@@ -1,0 +1,117 @@
+body {
+  overflow: hidden; /* Prevents scrolling */
+}
+
+.finish {
+  text-align: center;
+  background-color: #e6e6fa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.finish-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#finished {
+  font-family: "BeautifulPoliceOfficer", sans-serif !important;
+  font-size: clamp(5rem, 6vw, 6rem);
+  color: #6a5acd;
+  text-align: center;
+  max-width: 90vw;
+}
+
+#back-button {
+  color: #fff;
+  font-family: "BeautifulPoliceOfficer", sans-serif !important;
+  padding: 10px 5vw; /* Scales button padding */
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  background-color: #9370db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background-color: #8a2be2;
+}
+
+#stop-alarm-button {
+  position: relative;
+  color: #fff;
+  font-family: "BeautifulPoliceOfficer", sans-serif !important;
+  padding: 10px 5vw; /* Match back-button size */
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  background-color: #9370db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  overflow: visible;
+  transform: translateX(-10px); /* Moves the button slightly left */
+}
+
+/* Apply animation only when the button has 'vibrating' class */
+.vibrating {
+  animation: vibrate 0.4s ease-in-out infinite;
+}
+
+/* Vibration effect */
+@keyframes vibrate {
+  0% {
+    transform: translateX(-10px);
+  } /* Maintain left position */
+  25% {
+    transform: translateX(-12px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(-12px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+/* Ripple effect only when vibrating */
+.vibrating::before,
+.vibrating::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #8a2be2;
+  border-radius: inherit;
+  animation: rippleEffect 2s ease-out infinite;
+  opacity: 0;
+}
+
+.vibrating::after {
+  animation-delay: 1s;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Hover effect */
+#stop-alarm-button:hover {
+  background-color: #8a2be2;
+}

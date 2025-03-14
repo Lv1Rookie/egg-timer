@@ -1,0 +1,73 @@
+.menu {
+    text-align: center;
+    background-color: #FFF4E0;
+    min-height: 100vh; /* Ensures full height on all screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw; /* Responsive padding */
+    width: 100%;
+    box-sizing: border-box; /* Prevents overflow issues */
+}
+
+#question {
+    font-family: 'PixelScriptRegular', sans-serif;
+    font-size: clamp(2rem, 5.5vw, 2.5rem); /* Adjusts between 2rem and 2.5rem */
+    color: #FFB347;
+    white-space: nowrap; /* Keeps text on one line */
+    text-align: center;
+    display: inline-block;
+    max-width: 90vw; /* Prevents overflow on very small screens */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Starts slightly lower */
+    animation: fadeInUp 0.2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#timer-selection {
+    color: #fff;
+    font-family: 'BeautifulPoliceOfficer', sans-serif !important;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+#timer-selection:nth-child(1) { animation-delay: 0.2s; }
+#timer-selection:nth-child(2) { animation-delay: 0.4s; }
+#timer-selection:nth-child(3) { animation-delay: 0.6s; }
+#timer-selection:nth-child(4) { animation-delay: 0.8s; }
+#timer-selection:nth-child(5) { animation-delay: 1s; }
+
+#timer-selection:hover {
+    background-color: #FFC107;
+}
